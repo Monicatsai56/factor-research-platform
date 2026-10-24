@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np
 from scipy.stats import spearmanr
 
-MIN_STOCKS_PER_DATE = 10   # skip a cross-section with fewer names than this
+# skip a cross-section with fewer names than this
+MIN_STOCKS_PER_DATE = 10 
 
 # Newey-West lag: how many periods the IC autocorrelation extends.
 # Month-end grid + quarterly financials -> same report reused ~3 months, so

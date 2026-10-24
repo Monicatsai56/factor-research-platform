@@ -40,5 +40,4 @@ def load_financials():
 
 
 def load_all():
-    """Convenience: load everything at once."""
     return load_universe(), load_prices(), load_financials()

@@ -1,5 +1,5 @@
 """
-Responsibilities of THIS file (panel.py):
+Responsibilities of panel.py :
   - define the month-end observation dates (the common grid)
   - for each (observation_date, stock), pick the correct quarter using the
     point-in-time rules (+45 day release lag, 130-day carry-forward limit)
@@ -13,9 +13,6 @@ Responsibilities of THIS file (panel.py):
     (both strictly point-in-time; no future rows.)
   - assemble everything into a long panel: [date, ticker, industry, <factor>]
 
-What this file does NOT do: it doesn't know how any factor is computed. That
-lives in factors.py. panel.py just picks the right quarter(s)/prices and calls
-the formula. So adding a new factor requires NO changes here.
 
 Point-in-time rules:
   usable    : fiscal_period_end + 45 <= observation_date   (already published)

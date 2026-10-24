@@ -2,12 +2,11 @@
 from sqlalchemy import create_engine
 from config import DB_URL
 
-# A single shared engine for the whole app.
+# A single shared engine
 engine = create_engine(DB_URL, pool_pre_ping=True)
 
 
 def test_connection():
-    """Return (ok: bool, message: str). Used by the UI to show DB status."""
     try:
         with engine.connect() as conn:
             from sqlalchemy import text
